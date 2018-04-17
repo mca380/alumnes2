@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alumnes</title>
+    <meta charset="UTF-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/minty/bootstrap.min.css" rel="stylesheet" integrity="sha384-JhIgJbGaBmwiP1/6gN1Li6rs5arXlyM7vZ2Ehu3Pg6ySt73jpv+d6IKesRmwDhaa" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="CSS/estilo.css">
+    <script defer src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="JS/document.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Alumnes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation" style="">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarColor02">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Inici<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container" id = "formulari2">
+        <h1> Llistat d'alumnes</h1><!--Formulari Bootstrap on l'usuari introdueix les dades de l'alumne.-->
+        <form action="/action_page.php" id="formulari"><!--Aquí connectem el formulari amb la funcó JS-->
+            <div class="form-group">
+                <label for="DNI">DNI:</label>
+                <input type="text" class="form-control" id="dni" placeholder="Exemple: 79554122K" required></input>
+            </div>
+            <div class="form-group">
+                <label for="nom">Nom:</label>
+                <input type="text" class="form-control" id="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="llinatges">Llinatges:</label>
+                <input type="text" class="form-control" id="llinatges" required>
+            </div>
+            <div class="form-group">
+                <label for="mail">Mail:</label>
+                <input type="email" class="form-control" id="mail" required>
+            </div>
+            <div class="form-group">
+                <label for="nota">Nota:</label>
+                <input type="number" class="form-control" id="nota" step="0.05" min="0" max="10" required>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit">Introduir dades</button>
+        </form>
+        <table class="table table-hover" id="tabla"> <!--Taula buida que s'anirà emplenant en funció del que introdueixi l'usuari-->
+            <thead>
+                <tr>
+                    <th>DNI</th>
+                    <th>Nom</th>
+                    <th>Llinatges</th>
+                    <th>Mail</th>
+                    <th></th>
+                    <th>Nota</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="contingutTaula">
+            </tbody>
+        </table>
+    </div>
+        </body>
+        </html>

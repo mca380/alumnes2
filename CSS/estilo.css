@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+    color: grey;
+}
+
+table {
+    margin-top: 20px;
+}
+#borrar {
+    background: none;
+    border: none;
+}
+#formulari2 {
+    background-color: #E5F7F7;
+}
+body {
+    background-color: #EFF8F8;
+}
+
